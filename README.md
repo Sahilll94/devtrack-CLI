@@ -71,4 +71,4 @@ npx devtrack-cli remove 1
 This project is licensed under the MIT License.
 
 ## 🌟 Built By
-Developed by Sahil – Connect with me at [sahilportfolio](https://sahilportfolio.me/)
+Developed by Sahil – Connect with me at [sahilportfolio](https://sahilportfolio.me/).
