@@ -8,7 +8,7 @@ import chalk from "chalk";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Store tasks in user's home directory for persistence
+// Store tasks in user's home directory
 const TASKS_FILE = path.join(process.env.HOME || process.env.USERPROFILE, ".devtrack-tasks.json");
 
 // Load tasks from file
@@ -60,7 +60,7 @@ const listCompletedTasks = () => {
     if (completedTasks.length === 0) {
         console.log(chalk.yellow("⚠ No completed tasks found."));
     } else {
-        console.log(chalk.green("\n ✔ Completed Tasks:"));
+        console.log(chalk.green("\n✔ Completed Tasks:"));
         completedTasks.forEach((t, i) => {
             console.log(`${chalk.bold(i + 1)}. ${chalk.strikethrough(t.task)}`);
         });
@@ -91,7 +91,37 @@ const removeTask = (index) => {
     }
 };
 
-// Command Handling
+
+const showHelp = () => {
+    console.log(chalk.cyan(`
+📌 Devtrack CLI - A simple command-line task manager
+
+🔹 Usage Commands:
+1️⃣ Add a new task: 
+   👉 npx devtrack add "Complete LeetCode Problem of the Day"
+
+2️⃣ View all tasks: 
+   👉 npx devtrack list
+
+3️⃣ View completed tasks: 
+   👉 npx devtrack completed
+
+4️⃣ Mark a task as completed: 
+   👉 npx devtrack done 1
+
+5️⃣ Remove a task: 
+   👉 npx devtrack remove 1
+
+🌟 More Info:
+📂 GitHub Repo: ${chalk.white("https://github.com/Sahilll94/devtrack-CLI")}  
+📦 npm Package: ${chalk.white("https://www.npmjs.com/package/devtrack-cli")}  
+
+🚀 Built by Sahil - Connect with me:  
+   🔗 ${chalk.white("https://sahilportfolio.me/")}
+`));
+};
+
+
 const [, , command, ...args] = process.argv;
 switch (command) {
     case "add":
@@ -110,24 +140,5 @@ switch (command) {
         removeTask(parseInt(args[0]));
         break;
     default:
-        console.log(chalk.cyan(`
-📌 How to use Devtrack:
-1️⃣ Add a new task: 
-   👉 npx devtrack add "Complete LeetCode Problem of the Day"
-
-2️⃣ View all tasks: 
-   👉 npx devtrack list
-
-3️⃣ View completed tasks: 
-   👉 npx devtrack completed
-
-4️⃣ Mark a task as completed: 
-   👉 npx devtrack done 1
-
-5️⃣ Remove a task: 
-   👉 npx devtrack remove 1
-
-🌟 Built by Sahil - Connect with the developer: 
-   🔗 https://sahilportfolio.me/
-`));
+        showHelp();
 }
