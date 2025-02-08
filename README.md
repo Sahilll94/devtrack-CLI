@@ -7,7 +7,11 @@ A simple and lightweight CLI-based to-do list manager for tracking tasks efficie
 
 🔗 **NPM Package:** [Devtrack CLI on NPM](https://www.npmjs.com/package/devtrack-cli)  
 
+
 ---
+
+### NOTE : The NPM package will only work on a machine with Nodejs installed.
+
 
 ## 📌 Features  
 
