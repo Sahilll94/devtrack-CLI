@@ -27,7 +27,7 @@ A simple and lightweight CLI-based to-do list manager for tracking tasks efficie
 
 You can run Devtrack directly using `npx` (no installation required):  
 ```sh
-npx devtrack-cli <command>
+npx devtrack-cli
 ```
 
 Or install it globally:
