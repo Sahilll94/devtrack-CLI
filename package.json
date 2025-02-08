@@ -1,26 +1,26 @@
 {
-  "name": "devtrack-cli",
-  "version": "1.0.4",
-  "main": "index.js",
-  "bin": {
-    "devtrack": "index.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "todo",
-    "task-manager",
-    "cli",
-    "productivity"
-  ],
-  "author": "Sahil",
-  "license": "MIT",
-  "type": "module",
-  "description": "A simple CLI-based todo list manager",
-  "dependencies": {
-    "chalk": "^5.4.1",
-    "fs-extra": "^11.1.1",
-    "inquirer": "^9.2.11"
-  }
+    "name": "devtrack-cli",
+    "version": "1.0.4",
+    "main": "index.js",
+    "bin": {
+        "devtrack": "index.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "todo",
+        "task-manager",
+        "cli",
+        "productivity"
+    ],
+    "author": "Sahil",
+    "license": "MIT",
+    "type": "module",
+    "description": "A simple CLI-based todo list manager",
+    "dependencies": {
+        "chalk": "^5.4.1",
+        "fs-extra": "^11.1.1",
+        "inquirer": "^9.2.11"
+    }
 }
